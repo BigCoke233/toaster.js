@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Toaster.js</title>
+		<link rel="stylesheet" href="toaster.css">
+		<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background:#fafafa;
+			height: 100vh;
+			box-sizing:border-box;
+			overflow: hidden;
+			font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+		}
+		button {
+			border: 2px solid rgb(197,197,106);
+			background:rgb(197,197,106);
+			color: #fff;
+			outline: none;
+			cursor: pointer;
+			font-size: 18px;
+			padding: .3em .8em;
+			border-radius: 2px;
+			transition-property: color, background;
+			transition-duration: .3s;
+			font-weight: 600
+		}
+		button:hover {
+			color: rgb(197,197,106);
+			background: #fff
+		}
+		pre {
+			margin-bottom: 15px;
+			border-radius: 2px;
+			background: #eee;
+			padding: .5em 1em
+		}
+		h1 {
+			margin: 15px 0
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Toaster.js</h1>
+		<pre><code>Toaster.send('我是一个提示框');</code></pre>
+		<button onclick="Toaster.send('我是一个提示框');">点我</button>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="toaster.js"></script>
+	</body>
+</html>
