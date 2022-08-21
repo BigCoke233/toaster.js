@@ -1,0 +1,24 @@
+{
+  "name": "toaster",
+  "version": "0.0.1",
+  "description": "An extremely simple toast-notification JavaScript library.",
+  "main": "toaster.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigCoke233/toaster.js.git"
+  },
+  "keywords": [
+    "toast",
+    "toast-notification",
+    "notification"
+  ],
+  "author": "Eltrac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BigCoke233/toaster.js/issues"
+  },
+  "homepage": "https://github.com/BigCoke233/toaster.js#readme"
+}
