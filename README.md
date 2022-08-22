@@ -1,40 +1,62 @@
-# toaster.js
+# Toaster.js
 
-目前一些常见的信息提示框组件似乎都有些过于臃肿，如 `alertify.js` 和 `notyf.js` 等。
-他们有许多自定义极强的功能，但其中有 80% 的内容你可能都不会用到，甚至还不如原生的 `alert()` 来得方便。
-引用这些开源项目，尽管效果很不错，但其中没有用到的代码会大大浪费文件体积。如果你追求**轻量级**，这肯定是你不愿意看到的。
-我在开发别的项目的时候正好遇到了这个问题，于是随手写下了 `toaster.js`。
+> 这里有一个[简体中文版本](README-CN.md)的说明文档
 
-## 使用
+`Toaster.js` is a toast notification library depending on jQuery. As the name it has, `toaster.js` only conclude a few basic functions unlike other well-designed but overweight libraries. The total size of its CSS and JavaScript file is even less than 5KB before compressing.
 
-确保你引用了 jQuery，目前 `toaster.js` 需要 jQuery 的支持，但之后会开发原生 JS 版本。
+## Usage
 
-分别引入 `toaster.js` 和 `toaster.css`，当你需要弹出一个提示框时，你只需要：
+Clone or just grab `toaster.js` and `toaster.css` in the `main` branch.
 
-```javascript
-Toaster.toast('文字内容');
+```git
+$ git clone https://github.com/BigCoke233/toaster.js.git
 ```
 
-如果你需要弹出一个错误信息，下面这个方法能把提示框变成红色：
+Make sure you include jQuery and toaster.
 
-```javascript
-Toaster.error('文字内容');
+```html
+<link rel="stylesheet" href="toaster.css" />
+<!-- ... --->
+<script src="jquery.min.js"></script>
+<script src="toaster.js"></script>
 ```
 
-用以上方法弹出的信息框两秒后就会自动消失，直接点击它也会让它消失；每当有新的信息框出现，上一个信息框也会消失。
-
-如果你希望自定义某些属性，可以这样写：
+Whenever you feel like you need a notification, just to this.
 
 ```javascript
-Toaster.toast('文字内容', {
-    autoClose: true, //是否自动关闭提示框，默认为 true
-    autoCloseDelay: 2000, //若 autoClose 为 true，则该设置生效，决定在多少毫秒之后自动关闭提示框
-    color: '#C5C56A', //自定义提示框的背景色，默认为抹茶绿
-    position: 'right-top', //提示框弹出方向，可选的有 right-top left-top right-bottom left-bottom center
-    onClick: function(){} //定义点击提示框后的事件，默认为 undefined
+Toaster.toast('text');
+```
+
+If you can also send a warning with a red background like this.
+
+```javascript
+Toaster.error('warning');
+```
+
+Toasts sent by these methods above will automatically vanish after 2 seconds unless you click on it.
+
+## API
+
+You can set some more options like this when creating a toast.
+
+```
+Toaster.toast('text', {
+    autoClose: true,
+    autoCloseDelay: 2000,
+    color: '#C5C56A',
+    position: 'right-top',
+    onClick: function(){}
 })
 ```
 
+| API Name | Default | Explanation |
+| :--- | :--- | :--- |
+| `autoClose` |  `true` | Whether a toast dismiss itself |
+| `autoCloseDelay` | `2000` | After how long a toast automatically dismiss |
+| `color` | `#C5C56A` | The background color of a toast |
+| `position` | `right-top` | At which position a toast will appear. Options: `right-top`, `right-bottom`, `left-top`, `left-bottom`, `center` |
+| `onClick` | `function(){}` | The events on clicking a toast |
+
 ---
 
-Copyright &copy; 2022 BigCoke233
+Copyright &copy; 2022 [Eltrac](https://github.com/BigCoke233)
