@@ -7,10 +7,8 @@
  * jQuery required!
  */
 
-(function(){
 
-    Toaster = {};
-
+Toaster = function() {
     Toaster.amount = 0;
 
     Toaster.send = function(m, color='rgb(197,197,106)') {
@@ -45,7 +43,6 @@
             $(toast).remove();
         }, 1000);
     }
+};
 
-    return Toaster;
-
-})();
+new Toaster();
