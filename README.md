@@ -39,7 +39,7 @@ Toasts sent by these methods above will automatically vanish after 2 seconds unl
 
 You can set some more options like this when creating a toast.
 
-```
+```javascript
 Toaster.toast('text', {
     autoClose: true,
     autoCloseDelay: 2000,
