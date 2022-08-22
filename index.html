@@ -51,7 +51,7 @@
   autoClose: true,
   autoCloseDelay: 2000,
   onClick: function(){
-	Toaster.error(我是一个错误提示框);
+	Toaster.toast(我是一个在右下角的提示框, {position: 'right-bottom'});
   }
 });</code></pre>
 		<button onclick="Toaster.toast('我是一个提示框', {
@@ -59,9 +59,24 @@
 			autoClose: true,
 			autoCloseDelay: 2000,
 			onClick: function(){
-				Toaster.error('我是一个错误提示框');
+			  Toaster.toast('我是一个在右下角的提示框', {
+				position: 'right-bottom',
+				onClick: function(){
+					Toaster.toast('我是一个在左下角的提示框', {
+						position: 'left-bottom',
+						onClick: function(){
+							Toaster.toast('我是一个在左上角的提示框', {
+								position: 'left-top',
+								onClick: function(){
+									Toaster.error('我是一个错误提示框', {position: 'center'});
+								}
+							});
+						}
+					});
+				}
+			});
 			}
-		});">点我</button>
+		  });">点我</button>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="toaster.js"></script>
 	</body>

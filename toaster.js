@@ -14,7 +14,8 @@ Toaster = function() {
     Toaster.default = {
         color: '#C5C56A',
         autoClose: true,
-        autoCloseDelay: 2000
+        autoCloseDelay: 2000,
+        position: 'right-top'
     };
 
     //core method
@@ -24,7 +25,7 @@ Toaster = function() {
 
         var id = 'toast-'+Toaster.amount;
         var selector = '#'+id;
-        $toast = $('<div class="toaster"></div>').attr('id',id).text(m).css({'background': options.color || Toaster.default.color});
+        $toast = $('<div class="toaster"></div>').attr('id',id).text(m).css({'background': options.color || Toaster.default.color}).addClass('toaster-'+(options.position || Toaster.default.position));
         $('body').append($toast);
         setTimeout(function(){
             $(selector).addClass('toasting');
@@ -49,6 +50,7 @@ Toaster = function() {
     Toaster.error = function(m, options) {
         Toaster.default.color='#F44236';
         Toaster.toast(m, options);
+        Toaster.default.color='#C5C56A';
     }
 
     //dismiss given toast

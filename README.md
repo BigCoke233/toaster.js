@@ -30,6 +30,7 @@ Toaster.toast('文字内容', {
     autoClose: true, //是否自动关闭提示框，默认为 true
     autoCloseDelay: 2000, //若 autoClose 为 true，则该设置生效，决定在多少毫秒之后自动关闭提示框
     color: '#C5C56A', //自定义提示框的背景色，默认为抹茶绿
+    position: 'right-top', //提示框弹出方向，可选的有 right-top left-top right-bottom left-bottom center
     onClick: function(){} //定义点击提示框后的事件，默认为 undefined
 })
 ```
