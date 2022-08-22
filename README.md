@@ -21,7 +21,7 @@ Make sure you include jQuery and toaster.
 <script src="toaster.js"></script>
 ```
 
-Whenever you feel like you need a notification, just to this.
+Whenever you feel like you need a notification, just do this.
 
 ```javascript
 Toaster.toast('text');
