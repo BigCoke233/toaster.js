@@ -2,7 +2,7 @@
 
 > 这里有一个[简体中文版本](README-CN.md)的说明文档
 
-`Toaster.js` is a toast notification library depending on jQuery. As the name it has, `toaster.js` only conclude a few basic functions unlike other well-designed but overweight libraries. The total size of its CSS and JavaScript file is even less than 5KB before compressing.
+`Toaster.js` is a toast notification library depending on jQuery. As the name it has, `toaster.js` only include a few basic functions unlike other well-designed but overweight libraries. The total size of its CSS and JavaScript file is even less than 5KB before compressing.
 
 ## Usage
 
