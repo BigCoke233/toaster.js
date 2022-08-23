@@ -35,6 +35,14 @@ Toaster.error('warning');
 
 Toasts sent by these methods above will automatically vanish after 2 seconds unless you click on it.
 
+## Initialization
+
+`Toaster.js` automatically intialize itself. Howerver, in some specific circumstances, you might need to reload it like this.
+
+```javascript
+const toaster = new Toaster();
+```
+
 ## API
 
 You can set some more options like this when creating a toast.
